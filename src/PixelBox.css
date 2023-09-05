@@ -1,0 +1,66 @@
+:root {
+    --boxColor: #C6A86A;
+    --width: 1251px;
+    --height: 241px;
+    --box-inside-size: 20%;
+    --bb: 8px solid #000000;
+    --br: 8px solid #000000;
+    --bt: 8px solid #EBD9F0;
+    --bl: 8px solid #EBD9F0;
+    --b-inside: 8px solid #7C6E6E;
+    --font-color: #0d0d0d;
+    --font-size: 25px;
+}
+
+.login-box {
+    background-color: var(--boxColor);
+
+    width: var(--width);
+    height: var(--height);
+
+    flex-shrink: 0;
+
+    border-bottom: var(--bb);
+    border-right: var(--br);
+    border-left: var(--bl);
+    border-top: var(--bt);
+}
+
+.login-box .top-login {
+    background-color: var(--boxColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--font-color);
+    font-family: 'Press Start 2P', cursive;
+    font-size: var(--font-size);
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    background-size: 100% 100%;
+    height: var(--box-inside-size);
+    position: relative;
+    border-bottom: var(--b-inside);
+    border-right: var(--b-inside);
+}
+
+
+.login-box .margins {
+  width: 100%;
+  height: calc(100% - var(--box-inside-size));
+  border-top:  var(--bt);
+  border-bottom:  var(--b-inside);
+  border-right:  var(--b-inside);
+}
+
+/* Media Query for screens narrower than 768px */
+@media (max-width: 768px) {
+    :root {
+        --box-inside-size: 10%;
+        --font-size: 20px;
+    }
+
+    .login-box .top-login {
+        font-size: var(--font-size);
+    }
+}
